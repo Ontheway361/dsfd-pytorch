@@ -1,4 +1,5 @@
-#-*- coding:utf-8 -*-
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 from __future__ import division
 from __future__ import absolute_import
@@ -26,8 +27,7 @@ _C.data_anchor_sampling_prob = 0.5
 _C.min_face_size = 6.0
 _C.apply_distort = True
 _C.apply_expand = False
-_C.img_mean = np.array([104., 117., 123.])[:, np.newaxis, np.newaxis].astype(
-    'float32')
+_C.img_mean = np.array([104., 117., 123.])[:, np.newaxis, np.newaxis].astype('float32')
 _C.resize_width = 640
 _C.resize_height = 640
 _C.scale = 1 / 127.0
@@ -35,7 +35,7 @@ _C.anchor_sampling = True
 _C.filter_min_face = True
 
 # train config
-_C.LR_STEPS = (80000,100000,120000)
+_C.LR_STEPS = (80000, 100000, 120000)
 _C.MAX_STEPS = 150000
 _C.EPOCHES = 100
 
@@ -58,17 +58,4 @@ _C.CONF_THRESH = 0.05
 # loss config
 _C.NEG_POS_RATIOS = 3
 _C.NUM_CLASSES = 2
-
-# dataset config
-_C.HOME = '/home/lijun/data/'
-
-
-# face config
-_C.FACE = EasyDict()
-_C.FACE.TRAIN_FILE = './data/face_train.txt'
-_C.FACE.VAL_FILE = './data/face_val.txt'
-_C.FACE.FDDB_DIR = '/home/lijun/data/FDDB'
-_C.FACE.WIDER_DIR = '/home/lijun/data/WIDER'
-_C.FACE.AFW_DIR = '/home/lijun/data/AFW'
-_C.FACE.PASCAL_DIR = '/home/lijun/data/PASCAL_FACE'
 _C.FACE.OVERLAP_THRESH = 0.35
